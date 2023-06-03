@@ -19,7 +19,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     '/': {
       lang: 'zh-CN',
       title: "Qwang's blog",
-      description: 'web前端技术博客,专注web前端学习与总结。JavaScript,js,ES6,TypeScript,vue,React,python,css3,html5,Node,git,github等技术文章。',
+      description: '个人Web前端技术博客,专注web前端学习与总结。JavaScript,js,ES6,TypeScript,vue,React,python,css3,html5,Node,git,github等技术文章。',
     }
   },
   // base: '/', // 默认'/'。如果你想将你的网站部署到如 https://foo.github.io/bar/，那么 base 应该被设置成 "/bar/",（否则页面将失去样式等文件）
@@ -30,7 +30,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     nav: [
       { text: '首页', link: '/' },
       {
-        text: '前端',
+        text: '文档教程',
         link: '/web/', //目录页链接，此处link是vdoing主题新增的配置项，有二级导航时，可以点击一级导航跳到目录页
         items: [
           // 说明：以下所有link的值只是在相应md文件头部定义的永久链接（不是什么特殊编码）。另外，注意结尾是有斜杠的
@@ -38,10 +38,12 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
             text: '前端文章',
             items: [
               { text: 'JavaScript', link: '/pages/8143cc480faf9a11/' },
+              { text: 'HTML', link: '/pages/8309a5b876fc95e3/' },
+              { text: 'CSS', link: '/pages/0a83b083bdf257cb/' },
             ],
           },
           {
-            text: '学习笔记',
+            text: '学习教程',
             items: [
               { text: '《JavaScript教程》', link: '/note/javascript/' },
               { text: '《JavaScript高级程序设计》', link: '/note/js/' },
@@ -66,40 +68,36 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
               },
             ],
           },
+          {
+            text: '技术文档',
+            link: '/technology/',
+            items: [
+              { text: '技术文档', link: '/pages/9a7ee40fc232253e/' },
+              { text: 'GitHub技巧', link: '/pages/4c778760be26d8b3/' },
+              { text: 'Nodejs', link: '/pages/117708e0af7f0bd9/' },
+              { text: '博客搭建', link: '/pages/41f87d890d0a02af/' },
+            ],
+          },
         ],
       },
       {
-        text: '页面',
-        link: '/ui/',
+        text: '学习',
+        link: '/learn/',
         items: [
-          { text: 'HTML', link: '/pages/8309a5b876fc95e3/' },
-          { text: 'CSS', link: '/pages/0a83b083bdf257cb/' },
+          { text: '学习规划', link: '/pages/8309a5b876fc95e3/' },
+          { text: '学习总结', link: '/pages/8309a5b876fc95e3/' },
         ],
       },
       {
-        text: '技术',
-        link: '/technology/',
+        text: '随笔',
+        link: '/learn/',
         items: [
-          { text: '技术文档', link: '/pages/9a7ee40fc232253e/' },
-          { text: 'GitHub技巧', link: '/pages/4c778760be26d8b3/' },
-          { text: 'Nodejs', link: '/pages/117708e0af7f0bd9/' },
-          { text: '博客搭建', link: '/pages/41f87d890d0a02af/' },
+          { text: '读书笔记', link: '/pages/8309a5b876fc95e3/' },
+          { text: '记录生活', link: '/pages/0a83b083bdf257cb/' },
         ],
       },
       {
-        text: '更多',
-        link: '/more/',
-        items: [
-          { text: '学习', link: '/pages/f2a556/' },
-          { text: '面试', link: '/pages/aea6571b7a8bae86/' },
-          { text: '心情杂货', link: '/pages/2d615df9a36a98ed/' },
-          { text: '实用技巧', link: '/pages/baaa02/' },
-          { text: '友情链接', link: '/friends/' },
-        ],
-      },
-      // { text: '关于', link: '/about/' },
-      {
-        text: '收藏',
+        text: '宝藏网站',
         link: '/pages/beb6c0bd8a66cea6/',
         // items: [
         //   { text: '网站', link: '/pages/beb6c0bd8a66cea6/' },
@@ -108,7 +106,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         // ],
       },
       {
-        text: '索引',
+        text: '文章检索',
         link: '/archives/',
         items: [
           { text: '分类', link: '/categories/' },
@@ -116,6 +114,22 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
           { text: '归档', link: '/archives/' },
         ],
       },
+      {
+        text: '其他',
+        link: '/more/',
+        items: [
+          { text: '关于本站', link: '/about/' },
+          { text: '更新日志', link: '/about/' },
+          { text: '友情链接', link: '/about/' },
+          // { text: '学习', link: '/pages/f2a556/' },
+          // { text: '面试', link: '/pages/aea6571b7a8bae86/' },
+          // { text: '心情杂货', link: '/pages/2d615df9a36a98ed/' },
+          // { text: '实用技巧', link: '/pages/baaa02/' },
+          // { text: '友情链接', link: '/friends/' },
+        ],
+      },
+      // { text: '关于', link: '/about/' },
+
     ],
     sidebarDepth: 2, // 侧边栏显示深度，默认1，最大2（显示到h3标题）
     logo: 'https://s1.ax1x.com/2023/06/02/pCSWc4I.jpg', // 导航栏logo
@@ -148,7 +162,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     //   '图标地址1',
     //   '图标地址2'
     // ],
-    // contentBgStyle: 1, // 文章内容块的背景风格，默认无. 1 方格 | 2 横线 | 3 竖线 | 4 左斜线 | 5 右斜线 | 6 点状
+    contentBgStyle: 4, // 文章内容块的背景风格，默认无. 1 方格 | 2 横线 | 3 竖线 | 4 左斜线 | 5 右斜线 | 6 点状
 
     // updateBar: { // 最近更新栏
     //   showToArticle: true, // 显示到文章页底部，默认true
@@ -220,7 +234,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
 
   // 注入到页面<head>中的标签，格式[tagName, { attrName: attrValue }, innerHTML?]
   head: [
-    ['link', { rel: 'icon', href: '/img/favicon.ico' }], //favicons，资源放在public文件夹
+    ['link', { rel: 'icon', href: 'https://s1.ax1x.com/2023/06/02/pCSWc4I.jpg' }], //favicons，资源放在public文件夹
     [
       'meta',
       {
@@ -251,6 +265,23 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     ],
 
     'vuepress-plugin-baidu-autopush', // 百度自动推送
+    'reading-progress', //浏览进度显示
+
+    //网站动态标题
+    ['dynamic-title', {
+      // showIcon: '',
+      showText: '欢迎回来  O(∩_∩)O~~',
+      // hideIcon: '',
+      hideText: '等等，你别走啊 ::>_<::',
+      recoverTime: 2000,
+    }],
+    //彩虹背景
+    ['ribbon',{
+         size: 90, // width of the ribbon, default: 90
+         opacity: 0.8, // opacity of the ribbon, default: 0.3
+         zIndex: -1, // z-index property of the background, default: -1
+      },
+   ],
 
     [
       'vuepress-plugin-baidu-tongji', // 百度统计
