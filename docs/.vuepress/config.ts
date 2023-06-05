@@ -24,114 +24,17 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
   },
   // base: '/', // 默认'/'。如果你想将你的网站部署到如 https://foo.github.io/bar/，那么 base 应该被设置成 "/bar/",（否则页面将失去样式等文件）
 
+  //
+  markdown: {
+    lineNumbers: true,
+    extractHeaders: ['h2', 'h3', 'h4', 'h5', 'h6']
+  },
   // 主题配置
   themeConfig: {
     // 导航配置
-    nav: [
-      { text: '首页', link: '/' },
-      {
-        text: '文档教程',
-        link: '/web/', //目录页链接，此处link是vdoing主题新增的配置项，有二级导航时，可以点击一级导航跳到目录页
-        items: [
-          // 说明：以下所有link的值只是在相应md文件头部定义的永久链接（不是什么特殊编码）。另外，注意结尾是有斜杠的
-          {
-            text: '前端文章',
-            items: [
-              { text: 'JavaScript', link: '/pages/8143cc480faf9a11/' },
-              { text: 'HTML', link: '/pages/8309a5b876fc95e3/' },
-              { text: 'CSS', link: '/pages/0a83b083bdf257cb/' },
-            ],
-          },
-          {
-            text: '学习教程',
-            items: [
-              { text: '《JavaScript教程》', link: '/note/javascript/' },
-              { text: '《JavaScript高级程序设计》', link: '/note/js/' },
-              { text: '《ES6 教程》', link: '/note/es6/' },
-              { text: '《Vue》', link: '/note/vue/' },
-              { text: '《React》', link: '/note/react/' },
-              {
-                text: '《TypeScript 从零实现 axios》',
-                link: '/note/typescript-axios/',
-              },
-              {
-                text: '《Git》',
-                link: '/note/git/',
-              },
-              {
-                text: 'TypeScript',
-                link: '/pages/51afd6/',
-              },
-              {
-                text: 'JS设计模式总结',
-                link: '/pages/4643cd/',
-              },
-            ],
-          },
-          {
-            text: '技术文档',
-            link: '/technology/',
-            items: [
-              { text: '技术文档', link: '/pages/9a7ee40fc232253e/' },
-              { text: 'GitHub技巧', link: '/pages/4c778760be26d8b3/' },
-              { text: 'Nodejs', link: '/pages/117708e0af7f0bd9/' },
-              { text: '博客搭建', link: '/pages/41f87d890d0a02af/' },
-            ],
-          },
-        ],
-      },
-      {
-        text: '学习',
-        link: '/learn/',
-        items: [
-          { text: '学习规划', link: '/pages/8309a5b876fc95e3/' },
-          { text: '学习总结', link: '/pages/8309a5b876fc95e3/' },
-        ],
-      },
-      {
-        text: '随笔',
-        link: '/learn/',
-        items: [
-          { text: '读书笔记', link: '/pages/8309a5b876fc95e3/' },
-          { text: '记录生活', link: '/pages/0a83b083bdf257cb/' },
-        ],
-      },
-      {
-        text: '宝藏网站',
-        link: '/pages/beb6c0bd8a66cea6/',
-        // items: [
-        //   { text: '网站', link: '/pages/beb6c0bd8a66cea6/' },
-        //   { text: '资源', link: '/pages/eee83a9211a70f9d/' },
-        //   { text: 'Vue资源', link: '/pages/12df8ace52d493f6/' },
-        // ],
-      },
-      {
-        text: '文章检索',
-        link: '/archives/',
-        items: [
-          { text: '分类', link: '/categories/' },
-          { text: '标签', link: '/tags/' },
-          { text: '归档', link: '/archives/' },
-        ],
-      },
-      {
-        text: '其他',
-        link: '/more/',
-        items: [
-          { text: '关于本站', link: '/about/' },
-          { text: '更新日志', link: '/about/' },
-          { text: '友情链接', link: '/about/' },
-          // { text: '学习', link: '/pages/f2a556/' },
-          // { text: '面试', link: '/pages/aea6571b7a8bae86/' },
-          // { text: '心情杂货', link: '/pages/2d615df9a36a98ed/' },
-          // { text: '实用技巧', link: '/pages/baaa02/' },
-          // { text: '友情链接', link: '/friends/' },
-        ],
-      },
-      // { text: '关于', link: '/about/' },
-
-    ],
-    sidebarDepth: 2, // 侧边栏显示深度，默认1，最大2（显示到h3标题）
+    nav: require("./nav.js"),
+    // sidebar: require("./sidebar.js"),
+    sidebarDepth: 4, // 侧边栏显示深度，默认1，最大2（显示到h3标题）
     logo: 'https://s1.ax1x.com/2023/06/02/pCSWc4I.jpg', // 导航栏logo
     repo: 'xugaoyi/vuepress-theme-vdoing', // 导航栏右侧生成Github链接
     searchMaxSuggestions: 10, // 搜索结果显示最大数
@@ -272,7 +175,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       // showIcon: '',
       showText: '欢迎回来  O(∩_∩)O~~',
       // hideIcon: '',
-      hideText: '等等，你别走啊 ::>_<::',
+      hideText: '失联中...快回来 ::>_<::',
       recoverTime: 2000,
     }],
     //彩虹背景
