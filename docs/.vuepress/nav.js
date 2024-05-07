@@ -61,6 +61,10 @@ module.exports = [
     {
         text: '宝藏网站',
         link: '/pages/beb6c0bd8a66cea6/',
+				items: [
+					  { text: '网站', link: '/pages/beb6c0bd8a66cea6/' },
+					  { text: '前端轮子', link: '/pages/beb6c0bd8a66cea6/' },
+			  ],
     },
     {
         text: '文章检索',
@@ -71,13 +75,13 @@ module.exports = [
             { text: '归档', link: '/archives/' },
         ],
     },
-    {
-        text: '其他',
-        link: '/more/',
-        items: [
-            { text: '关于本站', link: '/about/' },
-            { text: '更新日志', link: '/about/' },
-            { text: '友情链接', link: '/about/' },
-        ],
-    },
+    // {
+    //     text: '其他',
+    //     link: '/more/',
+    //     items: [
+    //         { text: '关于本站', link: '/about/' },
+    //         { text: '更新日志', link: '/about/' },
+    //         { text: '友情链接', link: '/about/' },
+    //     ],
+    // },
 ]
