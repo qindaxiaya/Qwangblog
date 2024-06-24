@@ -1,7 +1,7 @@
 module.exports = [
   { text: "首页", link: "/" },
   {
-    text: "专栏",
+    text: "电子专栏",
     link: "/column/", //目录页链接，此处link是vdoing主题新增的配置项，有二级导航时，可以点击一级导航跳到目录页
     items: [
 			{ text: "《JavaScript教程》", link: "/note/javascript/" },
@@ -20,24 +20,24 @@ module.exports = [
   },
 	
   {
-    text: "前端",
+    text: "前端相关",
     link: "/web/",
     items: [
-      { text: "JavaScript", link: "/pages/a61298/" },
+      { text: "JS", link: "/pages/a61298/" },
       { text: "CSS", link: "/pages/3e8935/" },
     ],
   },
   {
-    text: "其他",
+    text: "技术文章",
     link: "/technology/",
     items: [
-      { text: "技术文档", link: "/pages/9a7ee40fc232253e/" },
+      { text: "相关技术", link: "/pages/9a7ee40fc232253e/" },
       { text: "GitHub技巧", link: "/pages/4c778760be26d8b3/" },
       { text: "博客搭建", link: "/pages/a5f73af5185fdf0a/" },
     ],
   },
   {
-    text: "更多",
+    text: "其他",
     link: "/more/",
     items: [
       { text: "学习", link: "/pages/f2a556/" },
