@@ -25,6 +25,7 @@ module.exports = [
     items: [
       { text: "JS", link: "/pages/a61298/" },
       { text: "CSS", link: "/pages/3e8935/" },
+      { text: "Vue", link: "/pages/6b451a/" },
     ],
   },
   {
